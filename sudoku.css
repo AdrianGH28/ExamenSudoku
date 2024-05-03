@@ -1,0 +1,133 @@
+*{
+    margin : 0;
+    padding: 0;
+
+}
+
+body{
+    text-align: center;
+    background: #43C6AC;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #F8FFAE, #43C6AC);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #f8ffae, #43C6AC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    overflow: hidden;
+    min-height: 100vh;
+}
+
+
+h1{
+    font-weight: 500;
+    font-size: 60px;
+    color: #43C6AC;
+    text-shadow: 2px 2px 4px rgba(14, 51, 212, 0.5);
+}
+
+.contenedor{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    box-shadow: 0px 0px 10px rgba(6, 31, 25, 0.9);
+}
+.celda{
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    font-size: 25px;
+    border: solid #43C6AC;
+    transition: all 0.3s ease-in-out;
+}
+table{
+    border-collapse: collapse;
+    border: 5px solid #0f2c26;
+}
+
+table tr:nth-child(3n) td, 
+table tr:nth-child(3n+3) td{
+    border-bottom: 3px solid #0f2c26;
+}
+
+table td:nth-child(3n){
+    border-right: 3px solid #0f2c26;
+
+}
+input{
+    outline: none;
+    color: #205e51;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button{
+    -webkit-appearance: none;
+    margin: 0;
+}
+button{
+    margin : 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    color: #f8ffae;
+    font-size: 17px;
+}
+
+#btn-Resolver{
+    background-color: #205e51;
+    transition: 1s;
+}
+#btn-Reiniciar{
+    background-color: #205e51;
+    transition: 1s;
+}
+
+#btn-Resolver:hover{
+    background-color: #F8FFAE;
+    color: #205e51;
+}
+#btn-Reiniciar:hover{
+    background-color: #F8FFAE;
+    color: #205e51;
+}
+.resolverEfecto{
+    background-color: #9beedd;
+    transition: all 0.2s ease-in-out;
+    float: left;
+}
+.entradaUsuario{
+    background-color: #9beedd;
+    
+
+}
+
+footer{
+    background: #43C6AC;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, #F8FFAE, #43C6AC);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, #F8FFAE, #43C6AC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    padding: 10px 0px;
+    font-size: 15px;
+    color: #000;
+}
+
+footer h3 {
+    color: #0f2c26;
+}
+
+footer a {
+    padding-top: 2.5px;
+    font-size: 16px;
+    color: #000000;
+    display: block;
+    font-size: 16px;
+    text-decoration: none;
+}
+footer a:hover {
+    color: #205e51;
+}
