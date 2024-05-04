@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 function verConflicto(tablero, fila, col, num) {
     const mCuadricula = 9
-    //verificamos la fila y la columna 
+ 
     for(let i = 0; i < mCuadricula; i++){
         if(tablero[fila][i] === num || tablero [i] [col] === num){
             return false;
