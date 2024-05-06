@@ -30,7 +30,7 @@ h1{
 .contenedor-g {
     display: flex;
     flex-direction: row;
-    align-items: center; /* Centra verticalmente los elementos */
+    align-items: center;
     justify-content: center;
 }
 
