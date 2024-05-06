@@ -16,6 +16,7 @@ body{
     flex-direction: column;
     overflow: hidden;
     min-height: 100vh;
+    overflow-y: scroll;
 }
 
 
@@ -24,6 +25,36 @@ h1{
     font-size: 60px;
     color: #43C6AC;
     text-shadow: 2px 2px 4px rgba(14, 51, 212, 0.5);
+}
+
+.contenedor-g {
+    display: flex;
+    flex-direction: row;
+    align-items: center; /* Centra verticalmente los elementos */
+    justify-content: center;
+}
+
+.instrucciones {
+    text-align: left;
+    margin-right: 20px;
+    max-width: 400px; 
+    margin: auto; 
+}
+
+.instrucciones h2 {
+    font-size: 30px;
+    color: #205e51;
+}
+
+.instrucciones p {
+    font-size: 20px;
+    color: #205e51;
+}
+
+.juego {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .contenedor{
@@ -131,3 +162,37 @@ footer a {
 footer a:hover {
     color: #205e51;
 }
+
+
+@media (max-width: 768px) {
+    h1 {
+      font-size: 80px;
+    }
+  
+    .celda {
+      width: 60px;
+      height: 60px;
+      font-size: 30px;
+    }
+
+    .contenedor-g {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .instrucciones {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    button {
+        margin: 10px; 
+        padding: 8px 16px; 
+        font-size: 14px; 
+    }
+
+    footer {
+        position: static;
+        width: 100%;
+    }
+  }
