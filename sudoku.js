@@ -216,6 +216,7 @@ function Entrada(event, fila, col){
         celda.value = "";
         return;
     }
+    
 
     const numIngresado = parseInt(valor);
 
