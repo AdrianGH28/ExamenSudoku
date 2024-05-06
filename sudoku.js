@@ -98,16 +98,36 @@ async function resolverSudoku() {
                 }
             }
         }
-    } else{
+        
+        if (tableroCompleto(lSudoku)) {
+            Swal.fire({
+                icon: "success",
+                title: "¡Felicidades! Has completado el Sudoku.",
+                showConfirmButton: false,
+                timer: 2500
+            });
+        }
+    } else {
         Swal.fire({
             icon: "warning",
             title: "Este juego no tiene solución",
             showConfirmButton: false,
-            timer : 2500
-          })
+            timer: 2500
+        });
         celda.value = "";
         return;
     }
+}
+
+function tableroCompleto(tablero) {
+    for (let fila = 0; fila < tablero.length; fila++) {
+        for (let col = 0; col < tablero[fila].length; col++) {
+            if (tablero[fila][col] === 0) {
+                return false;
+            }
+        }
+    }
+    return true;
 }
 
 function iniciarTableroRandom() {
