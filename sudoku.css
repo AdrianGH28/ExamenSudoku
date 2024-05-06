@@ -18,19 +18,31 @@ body{
     min-height: 100vh;
     overflow-y: scroll;
 }
+.juego {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.juego h1 {
+    margin-bottom: 20px; 
+}
 
 
 h1{
     font-weight: 500;
     font-size: 60px;
     color: #43C6AC;
-    text-shadow: 2px 2px 4px rgba(14, 51, 212, 0.5);
+    margin-bottom: 20px;
+    -webkit-text-stroke: 1px #43C6AC;
+    color: transparent;
 }
 
 .contenedor-g {
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items: center; 
     justify-content: center;
 }
 
