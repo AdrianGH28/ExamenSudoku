@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,20 +8,29 @@
     <title>Sudoku</title>
 
 </head>
+
 <body>
-    
-    <h1>Sudoku</h1>
-    <div class="contenedor">
-        <table>
-            <tbody id="tabla-Sudoku">
+    <div class="contenedor-g">
+        <div class="instrucciones">
+            <h2>Instrucciones</h2>
+            <p>1. Coloca un número del 1 al 9 en cada celda vacía.</p>
+            <p>2. Asegúrate de que no haya números repetidos en filas, columnas o subcuadrículas 3x3.</p>
+        </div>
+        <div class="juego">
+            <h1>Sudoku</h1>
+            <div class="contenedor">
+                <table>
+                    <tbody id="tabla-Sudoku">
 
-            </tbody>
-        </table>
-    </div>
-    <div>
-        <button id="btn-Resolver">Resolver</button>
-        <button id="btn-Reiniciar">Reiniciar</button>
+                    </tbody>
+                </table>
+            </div>
+            <div>
+                <button id="btn-Resolver">Resolver</button>
+                <button id="btn-Reiniciar">Reiniciar</button>
 
+            </div>
+        </div>
     </div>
     <script src="./sudoku.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
@@ -29,4 +39,5 @@
     <h3>Enlace</h3>
     <a href="https://adriangh28.github.io/Portafolio/" target="_self">Portafolio</a>
 </footer>
+
 </html>
