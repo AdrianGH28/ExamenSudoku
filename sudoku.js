@@ -30,12 +30,14 @@ document.addEventListener("DOMContentLoaded", function () {
         }
         tablaSudoku.append(nuevafila);
     }
+
+    iniciarTableroRandom();
 });
 
 
 function verConflicto(tablero, fila, col, num) {
     const mCuadricula = 9
- 
+    //verificamos la fila y la columna 
     for(let i = 0; i < mCuadricula; i++){
         if(tablero[fila][i] === num || tablero [i] [col] === num){
             return false;
@@ -108,6 +110,33 @@ async function resolverSudoku() {
     }
 }
 
+function iniciarTableroRandom() {
+    const mCuadricula = 9;
+    const celdaVacia = [];
+  
+   
+    for (let fila = 0; fila < mCuadricula; fila++) {
+      for (let col = 0; col < mCuadricula; col++) {
+        const celdaid = `celda-${fila}-${col}`;
+        if (document.getElementById(celdaid).value === "") {
+          celdaVacia.push({ fila, col });
+        }
+      }
+    }
+  
+ 
+    for (let i = 0; i < 10; i++) {
+      const indiceRandom = Math.floor(Math.random() * celdaVacia.length);
+      const celdaRandom = celdaVacia[indiceRandom];
+      const num = Math.floor(Math.random() * 9) + 1;
+  
+      document.getElementById(`celda-${celdaRandom.fila}-${celdaRandom.col}`).value = num;
+  
+    
+      celdaVacia.splice(indiceRandom, 1);
+    }
+  }
+
 function reiniciarSudoku(){
     for(let fila = 0; fila < mCuadricula ; fila++){
         for(let col = 0; col < mCuadricula; col++){
@@ -117,6 +146,7 @@ function reiniciarSudoku(){
             celda.classList.remove("Resolver", "efecto", "entradaUsuario");
         }
     }
+    iniciarTableroRandom();
 }
 
 function Sudoku(tablero){
