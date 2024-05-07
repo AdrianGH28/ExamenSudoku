@@ -1,3 +1,4 @@
+let mCuadricula=9;
 
 document.addEventListener("DOMContentLoaded", function () {
 
