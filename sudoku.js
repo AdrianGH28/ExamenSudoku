@@ -1,4 +1,5 @@
 let mCuadricula=9;
+let puntaje = 0; 
 
 document.addEventListener("DOMContentLoaded", function () {
 
@@ -38,7 +39,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 function verConflicto(tablero, fila, col, num) {
     const mCuadricula = 9
-    //verificamos la fila y la columna 
+   
     for(let i = 0; i < mCuadricula; i++){
         if(tablero[fila][i] === num || tablero [i] [col] === num){
             return false;
@@ -99,8 +100,11 @@ async function resolverSudoku() {
                 }
             }
         }
-        
         if (tableroCompleto(lSudoku)) {
+            
+            puntaje += 100;
+            document.getElementById("puntaje").textContent = "Puntaje: " + puntaje;
+           
             Swal.fire({
                 icon: "success",
                 title: "¡Felicidades! Has completado el Sudoku.",
